@@ -16,7 +16,12 @@ program
   .action(() => {
     api.clear().then(() => { console.log('清除完毕') }, () => { console.log('清除失败') })
   });
-
+program
+  .command('showAll')
+  .description('show all tasks')
+  .action(() => {
+    void api.showAll()
+  });
 program.parse();
 
 
